@@ -119,8 +119,8 @@ const initApp = () => {
             
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
-            statusDiv.style.display = 'none';
             statusDiv.className = '';
+            statusDiv.style.display = 'none';
             
             const data = new FormData(contactForm);
             
@@ -141,7 +141,6 @@ const initApp = () => {
                     statusDiv.textContent = 'Message sent successfully. We will get back to you soon.';
                     contactForm.reset();
                     
-                    // Hide message after 5 seconds
                     setTimeout(() => {
                         statusDiv.style.display = 'none';
                     }, 5000);

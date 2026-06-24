@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="view-transition" content="same-origin">
-    <title>About - HAGERE Tech Solutions</title>
+    <title>About HAGERE Tech Solutions</title>
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/components.css">
@@ -35,15 +35,11 @@
         }
 
         .bio-card {
-            background: rgba(10, 10, 10, 0.4);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(243, 244, 246, 0.05);
             border-radius: 12px;
             padding: 2rem;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
         }
 
         .bio-card::before {
@@ -133,7 +129,7 @@
                     </div>
                     
                     <div class="founder-bio">
-                        <div class="bio-card">
+                        <div class="bio-card tinted-glass-card">
                             <p>As a solo founder, designer, and developer, I established HAGERE Tech Solutions to bridge the gap between emerging technology and real-world utility in Ethiopia.</p>
                             <p>My work is centered around building resilient, accessible, and highly practical systems. I handle end-to-end design and development, ensuring that every product we launch is optimized for the environment it operates in.</p>
                             <p>The goal is simple: to create tools that people and businesses can rely on every single day.</p>
@@ -150,19 +146,19 @@
             </div>
             <div class="container container-coming-soon">
                 <div class="grid-3">
-                    <div class="product-card product-card-small">
+                    <div class="product-card product-card-small tinted-glass-card">
                         <span class="status-text">In Development</span>
                         <h3>Suke</h3>
                         <p>Inventory Management System for shop owners to manage stock, record sales, and access business insights.</p>
                         <a href="https://suke-solutions.lovable.app" class="btn btn-emerald mt-4" target="_blank" rel="noopener noreferrer">Explore Suke</a>
                     </div>
-                    <div class="product-card product-card-small">
+                    <div class="product-card product-card-small tinted-glass-card">
                         <span class="status-text status-muted">Coming Soon</span>
                         <h3>Finance Tool</h3>
                         <p>Practical financial tracking and insights tailored for small businesses.</p>
                         <button class="btn btn-glass btn-disabled mt-4" disabled>Coming Soon</button>
                     </div>
-                    <div class="product-card product-card-small">
+                    <div class="product-card product-card-small tinted-glass-card">
                         <span class="status-text status-muted">Coming Soon</span>
                         <h3>Logistics Sync</h3>
                         <p>Delivery and supply chain management designed for local context.</p>
