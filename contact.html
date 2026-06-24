@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>Contact - HAGERE Tech Solutions</title>
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/components.css">
+    <style>
+        .contact-link-card {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(243, 244, 246, 0.05);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all var(--transition-medium);
+            margin-bottom: 0.75rem;
+        }
+        .contact-link-card:last-child {
+            margin-bottom: 0;
+        }
+        .contact-link-card:hover {
+            transform: translateY(-2px);
+            background: rgba(30, 41, 59, 0.7);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+        .contact-link-card svg {
+            color: var(--accent-emerald);
+            margin-right: 0.75rem;
+            width: 20px;
+            height: 20px;
+        }
+        .contact-link-card span {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .glass-form-card {
+            background: rgba(10, 10, 10, 0.4);
+            border: 1px solid rgba(243, 244, 246, 0.05);
+            border-radius: 8px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-form-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gradient-overlay);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(243, 244, 246, 0.08);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color var(--transition-fast), background var(--transition-fast);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-emerald);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(243, 244, 246, 0.05);
+        }
+        .social-link {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        .social-link:hover {
+            color: var(--text-primary);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            max-width: 440px;
+            margin: 0 auto;
+        }
+        @media (min-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1.5fr;
+                gap: 4rem;
+                max-width: 900px;
+                align-items: start;
+            }
+        }
+        .main-contact-section {
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay" id="mobile-overlay"></div>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="logo">HAGERE TECH</a>
+            <nav class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/solutions.html" class="nav-link">Solutions</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link active">Contact</a>
+            </nav>
+            <a href="/contact.html" class="btn btn-emerald desktop-cta">Contact</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open Menu" aria-expanded="false" aria-controls="mobile-sidebar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <aside class="mobile-sidebar" id="mobile-sidebar" aria-hidden="true">
+        <div class="sidebar-header">
+            <a href="/" class="logo">HAGERE TECH</a>
+            <button class="close-btn" id="close-btn" aria-label="Close Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/solutions.html" class="nav-link">Solutions</a>
+            <a href="/about.html" class="nav-link">About</a>
+            <a href="/contact.html" class="nav-link active">Contact</a>
+            <a href="/contact.html" class="btn btn-emerald mobile-cta">Contact</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" style="min-height: 40vh; padding-bottom: 0;">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-content">
+                <h1 style="font-size: clamp(2rem, 4vw, 3rem);">Get in Touch</h1>
+                <p>We invite visitors, businesses, organizations, and individuals to contact HAGERE Tech Solutions to explore practical digital solutions and collaborations.</p>
+            </div>
+        </section>
+
+        <!-- Main Contact Section -->
+        <section class="main-contact-section" style="padding-top: 4rem; position: relative; overflow: hidden;">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="contact-grid">
+                    <!-- Left Side: Cards -->
+                    <div class="contact-cards">
+                        <a href="mailto:hundaolworku1949@gmail.com" class="contact-link-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://wa.me/251939830966" class="contact-link-card" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://t.me/HagereTech_soln" class="contact-link-card" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            <span>Telegram</span>
+                        </a>
+                        <a href="#" class="contact-link-card" aria-label="Instagram placeholder">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+
+                    <!-- Right Side: Form -->
+                    <div class="glass-form-card">
+                        <form id="contact-form" action="https://formspree.io/f/xaqgqewa" method="post">
+                            <input type="hidden" name="_to" value="hundaolworku1949@gmail.com">
+                            <div id="form-status" style="display: none; margin-bottom: 1rem; padding: 1rem; border-radius: 8px; font-size: 0.95rem; font-weight: 500;"></div>
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" name="Name" class="form-control" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" name="Email" class="form-control" required placeholder="Your email address">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <input type="text" name="Subject" class="form-control" required placeholder="What is this regarding?">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="margin-bottom: 0.5rem;">Message</label>
+                                <textarea name="Message" class="form-control" required placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-emerald" style="width: 100%; padding: 0.75rem;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Section -->
+        <section class="social-section">
+            <div class="container container-compact">
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram placeholder">Instagram</a>
+                    <a href="#" class="social-link" aria-label="Facebook placeholder">Facebook</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn placeholder">LinkedIn</a>
+                    <a href="#" class="social-link" aria-label="TikTok placeholder">TikTok</a>
+                    <a href="#" class="social-link" aria-label="Twitter / X placeholder">Twitter / X</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing Section -->
+        <section class="closing-section" style="padding-top: 3rem; padding-bottom: 2rem;">
+            <div class="container container-centered">
+                <p style="color: var(--text-secondary); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Whether you have a fully formed idea, a technical question, or an interest in collaborating, we are always open to exploring how we can build practical solutions together.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">HAGERE Tech Solutions</div>
+                <div class="footer-copyright">&copy; 2026 All rights reserved</div>
+            </div>
+            <div class="footer-social">
+                <a href="mailto:hundaolworku1949@gmail.com" aria-label="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                </a>
+                <a href="https://wa.me/251939830966" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#" aria-label="LinkedIn placeholder">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/scripts/main.js"></script>
+</body>
+</html>

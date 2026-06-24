@@ -1,0 +1,64 @@
+:root {
+    /* Colors */
+    --bg-dark: #0a0a0a;
+    --surface-slate: #1e293b;
+    --surface-darker: #0f172a;
+    
+    --text-primary: #f3f4f6; /* Broken white */
+    --text-secondary: #9ca3af;
+    
+    --accent-emerald: #10b981;
+    --accent-emerald-blue: #0ea5e9;
+    --success-dark: #047857;
+    --accent-gold: #f59e0b;
+    
+    /* Overlay gradient */
+    --gradient-overlay: linear-gradient(135deg, rgba(14,165,233,0.1) 0%, rgba(16,185,129,0.15) 100%);
+    
+    /* Font */
+    --font-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-base);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+::selection {
+    background-color: var(--accent-emerald);
+    color: var(--bg-dark);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+/* CSS View Transitions */
+@view-transition {
+    navigation: auto;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Static HTML Portfolio",
+  "description": "A pure HTML, CSS, and JS static website structure without any frameworks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

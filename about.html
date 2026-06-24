@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>About - HAGERE Tech Solutions</title>
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/components.css">
+    <style>
+        .avatar-circle {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--accent-emerald-blue), var(--accent-emerald));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--bg-dark);
+            margin: 0 auto 1.5rem auto;
+            box-shadow: 0 8px 32px rgba(14, 165, 233, 0.3);
+        }
+        
+        .founder-role {
+            color: var(--accent-gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .bio-card {
+            background: rgba(10, 10, 10, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(243, 244, 246, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bio-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gradient-overlay);
+        }
+
+        .bio-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .bio-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .company-identity {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay" id="mobile-overlay"></div>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="logo">HAGERE TECH</a>
+            <nav class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/solutions.html" class="nav-link">Solutions</a>
+                <a href="/about.html" class="nav-link active">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </nav>
+            <a href="/contact.html" class="btn btn-emerald desktop-cta">Contact</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open Menu" aria-expanded="false" aria-controls="mobile-sidebar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <aside class="mobile-sidebar" id="mobile-sidebar" aria-hidden="true">
+        <div class="sidebar-header">
+            <a href="/" class="logo">HAGERE TECH</a>
+            <button class="close-btn" id="close-btn" aria-label="Close Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/solutions.html" class="nav-link">Solutions</a>
+            <a href="/about.html" class="nav-link active">About</a>
+            <a href="/contact.html" class="nav-link">Contact</a>
+            <a href="/contact.html" class="btn btn-emerald mobile-cta">Contact</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" style="min-height: 40vh; padding-bottom: 0;">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-content">
+                <h1 style="font-size: clamp(2rem, 4vw, 3rem);">About HAGERE Tech Solutions</h1>
+                <p>HAGERE Tech Solutions is an Ethiopian tech company building practical digital solutions focused on reliability, accessibility, and seamless integration with local systems.</p>
+            </div>
+        </section>
+
+        <!-- Founder + Company Split Section -->
+        <section class="founder-section" style="padding-top: 4rem; position: relative; overflow: hidden;">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="grid-2" style="align-items: center;">
+                    <div class="company-identity">
+                        <div class="avatar-circle">HW</div>
+                        <h2 style="font-size: 2rem; margin-bottom: 0.25rem;">Hundaol Worku</h2>
+                        <span class="founder-role">Founder / Developer</span>
+                        <p style="color: var(--text-secondary); font-size: 1.05rem; margin-top: 1.5rem; line-height: 1.6;">
+                            HAGERE Tech Solutions is an Ethiopian startup building practical digital solutions for real-world use cases. 
+                            <br><br>
+                            <strong style="color: var(--accent-emerald);">June 2026</strong> — HAGERE was born.
+                        </p>
+                    </div>
+                    
+                    <div class="founder-bio">
+                        <div class="bio-card">
+                            <p>As a solo founder, designer, and developer, I established HAGERE Tech Solutions to bridge the gap between emerging technology and real-world utility in Ethiopia.</p>
+                            <p>My work is centered around building resilient, accessible, and highly practical systems. I handle end-to-end design and development, ensuring that every product we launch is optimized for the environment it operates in.</p>
+                            <p>The goal is simple: to create tools that people and businesses can rely on every single day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work / Products Section -->
+        <section class="work-products" style="padding-top: 4rem;">
+            <div class="container container-centered" style="margin-bottom: 3rem;">
+                <h2>Work & Solutions</h2>
+            </div>
+            <div class="container container-coming-soon">
+                <div class="grid-3">
+                    <div class="product-card product-card-small">
+                        <span class="status-text">In Development</span>
+                        <h3>Suke</h3>
+                        <p>Inventory Management System for shop owners to manage stock, record sales, and access business insights.</p>
+                        <a href="https://suke-solutions.lovable.app" class="btn btn-emerald mt-4" target="_blank" rel="noopener noreferrer">Explore Suke</a>
+                    </div>
+                    <div class="product-card product-card-small">
+                        <span class="status-text status-muted">Coming Soon</span>
+                        <h3>Finance Tool</h3>
+                        <p>Practical financial tracking and insights tailored for small businesses.</p>
+                        <button class="btn btn-glass btn-disabled mt-4" disabled>Coming Soon</button>
+                    </div>
+                    <div class="product-card product-card-small">
+                        <span class="status-text status-muted">Coming Soon</span>
+                        <h3>Logistics Sync</h3>
+                        <p>Delivery and supply chain management designed for local context.</p>
+                        <button class="btn btn-glass btn-disabled mt-4" disabled>Coming Soon</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA section -->
+        <section class="bottom-cta">
+            <div class="container container-centered">
+                <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">Contact Us</h2>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Reach out for collaboration, project inquiries, or to learn more about our solutions.</p>
+                <a href="/contact.html" class="btn btn-emerald mt-4">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">HAGERE Tech Solutions</div>
+                <div class="footer-copyright">&copy; 2026 All rights reserved</div>
+            </div>
+            <div class="footer-social">
+                <a href="mailto:hundaolworku1949@gmail.com" aria-label="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                </a>
+                <a href="https://wa.me/251939830966" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#" aria-label="LinkedIn placeholder">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/scripts/main.js"></script>
+</body>
+</html>

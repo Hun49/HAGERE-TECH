@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>Solutions - HAGERE Tech Solutions</title>
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/components.css">
+</head>
+<body>
+    <div class="overlay" id="mobile-overlay"></div>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="logo">HAGERE TECH</a>
+            <nav class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/solutions.html" class="nav-link active">Solutions</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </nav>
+            <a href="/contact.html" class="btn btn-emerald desktop-cta">Contact</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open Menu" aria-expanded="false" aria-controls="mobile-sidebar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <aside class="mobile-sidebar" id="mobile-sidebar" aria-hidden="true">
+        <div class="sidebar-header">
+            <a href="/" class="logo">HAGERE TECH</a>
+            <button class="close-btn" id="close-btn" aria-label="Close Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/solutions.html" class="nav-link active">Solutions</a>
+            <a href="/about.html" class="nav-link">About</a>
+            <a href="/contact.html" class="nav-link">Contact</a>
+            <a href="/contact.html" class="btn btn-emerald mobile-cta">Contact</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-content">
+                <h1>Our Solutions</h1>
+                <p>HAGERE Tech Solutions builds practical digital solutions for Ethiopian users, businesses, and organizations, with a focus on reliability, accessibility, and integration with existing systems and workflows.</p>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="intro-section">
+            <div class="container container-compact text-center">
+                <p style="text-align: center; color: var(--text-secondary); font-size: 1.05rem;">We believe in systems that are built for the environment they operate in. Our approach prioritizes offline-first capabilities, low-bandwidth optimization, and straightforward user experiences to ensure our tools work when and where they are needed most.</p>
+            </div>
+        </section>
+
+        <!-- Featured Suke spotlight card -->
+        <section class="featured-spotlight">
+            <div class="container container-spotlight">
+                <div class="product-card">
+                    <div class="product-content">
+                        <span class="status-text">In Development</span>
+                        <h2>Suke</h2>
+                        <h4>Inventory Management System</h4>
+                        <p>A mobile app for shop owners to manage stock, record sales, and access business insights through a simple and reliable experience.</p>
+                        <a href="https://suke-solutions.lovable.app" class="btn btn-emerald mt-4" target="_blank" rel="noopener noreferrer">Explore Suke</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming Soon cards section -->
+        <section class="coming-soon">
+            <div class="container container-coming-soon">
+                <div class="grid-3">
+                    <div class="product-card product-card-small">
+                        <span class="status-text status-muted">Coming Soon</span>
+                        <h3>Finance Tool</h3>
+                        <p>Practical financial tracking and insights tailored for small businesses.</p>
+                        <button class="btn btn-glass btn-disabled mt-4" disabled>Coming Soon</button>
+                    </div>
+                    <div class="product-card product-card-small">
+                        <span class="status-text status-muted">Coming Soon</span>
+                        <h3>Logistics Sync</h3>
+                        <p>Delivery and supply chain management designed for local context.</p>
+                        <button class="btn btn-glass btn-disabled mt-4" disabled>Coming Soon</button>
+                    </div>
+                    <div class="product-card product-card-small">
+                        <span class="status-text status-muted">Coming Soon</span>
+                        <h3>Service Booking</h3>
+                        <p>Connecting service providers with clients efficiently and reliably.</p>
+                        <button class="btn btn-glass btn-disabled mt-4" disabled>Coming Soon</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA section -->
+        <section class="bottom-cta">
+            <div class="container container-centered">
+                <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">Have a project in mind?</h2>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Contact HAGERE Tech Solutions to discuss future ideas, technical needs, or custom digital products for your organization.</p>
+                <a href="/contact.html" class="btn btn-emerald mt-4">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">HAGERE Tech Solutions</div>
+                <div class="footer-copyright">&copy; 2026 All rights reserved</div>
+            </div>
+            <div class="footer-social">
+                <a href="mailto:hundaolworku1949@gmail.com" aria-label="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                </a>
+                <a href="https://wa.me/251939830966" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#" aria-label="LinkedIn placeholder">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/scripts/main.js"></script>
+</body>
+</html>
